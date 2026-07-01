@@ -1,10 +1,13 @@
 export const patreonUrl = "https://www.patreon.com/cw/gatornationfootballpodcast";
 export const youtubeUrl = "https://www.youtube.com/@TheGatorNationFootballPodcast";
 export const storeUrl = "https://gnfp.sellfy.store/";
+export const spotifyShowUrl = "https://open.spotify.com/show/5g6RBSb7vQCglyfXkm5Pce";
+export const spotifyShowId = "5g6RBSb7vQCglyfXkm5Pce";
 export const contactEmail = "gatornationfootballpodcast@gmail.com";
 
 export const navItems = [
   { href: "/episodes", label: "Episodes" },
+  { href: "/listen", label: "Listen" },
   { href: "/#membership", label: "Membership" },
   { href: "/about", label: "About" },
   { href: "/#contact", label: "Contact" },

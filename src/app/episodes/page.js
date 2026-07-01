@@ -2,6 +2,7 @@ import SiteHeader from "../_components/SiteHeader/SiteHeader";
 import {
   episodes,
   latestYouTubeEpisode,
+  spotifyShowUrl,
   youtubeUrl,
 } from "../_data/podcast";
 import styles from "./page.module.css";
@@ -34,6 +35,14 @@ export default function EpisodesPage() {
                 rel="noopener noreferrer"
               >
                 Open YouTube channel
+              </a>
+              <a
+                className={styles.secondaryButton}
+                href={spotifyShowUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Listen on Spotify
               </a>
             </div>
           </div>

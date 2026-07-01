@@ -6,6 +6,7 @@ import {
   benefits,
   latestYouTubeEpisode,
   patreonUrl,
+  spotifyShowUrl,
   youtubeUrl,
 } from "./_data/podcast";
 import styles from "./page.module.css";
@@ -44,6 +45,14 @@ export default function Home() {
               <Link className={styles.secondaryButton} href="/episodes">
                 Browse episodes
               </Link>
+              <a
+                className={styles.secondaryButton}
+                href={spotifyShowUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Listen on Spotify
+              </a>
               <a
                 className={styles.secondaryButton}
                 href={youtubeUrl}
@@ -99,6 +108,9 @@ export default function Home() {
               >
                 Open channel
               </a>
+              <Link className={styles.secondaryButton} href="/listen">
+                Open listen page
+              </Link>
             </div>
           </div>
         </div>
