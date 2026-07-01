@@ -1,0 +1,440 @@
+.page {
+  --ink: #f7f3ea;
+  --muted: #c4c8d2;
+  --dim: #858b99;
+  --night: #05080f;
+  --blue: #2e7df6;
+  --orange: #ff5a1f;
+  --line: rgba(255, 255, 255, 0.16);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(5, 8, 15, 0.86), #05080f 52%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 0 1px,
+      transparent 1px 72px
+    ),
+    var(--night);
+  color: var(--ink);
+}
+
+.skipLink {
+  position: fixed;
+  left: 18px;
+  top: 14px;
+  z-index: 20;
+  transform: translateY(-140%);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: var(--ink);
+  color: var(--night);
+  font-weight: 800;
+  transition: transform 180ms var(--ease);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+.hero {
+  position: relative;
+  min-height: 92vh;
+  padding: 22px clamp(18px, 4vw, 58px) 64px;
+  isolation: isolate;
+}
+
+.hero::after {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: -1;
+  height: 46%;
+  content: "";
+  background: linear-gradient(180deg, transparent, var(--night) 76%);
+}
+
+.heroMedia {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background-image: url("/gnfp-hero-banner.png");
+  background-position: right clamp(18px, 8vw, 110px) center;
+  background-repeat: no-repeat;
+  background-size: min(48vw, 620px) auto;
+  animation: heroReveal 900ms var(--ease) both;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(
+      circle at 72% 40%,
+      rgba(46, 125, 246, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(5, 8, 15, 0.96) 0%,
+      rgba(5, 8, 15, 0.76) 43%,
+      rgba(5, 8, 15, 0.18) 100%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.04) 0 1px,
+      transparent 1px 5px
+    );
+}
+
+.heroGrid {
+  max-width: 1240px;
+  min-height: calc(92vh - 88px);
+  margin: 0 auto;
+  display: flex;
+  align-items: end;
+  padding-top: clamp(88px, 14vh, 158px);
+}
+
+.heroContent {
+  max-width: 780px;
+  padding-bottom: clamp(18px, 5vh, 58px);
+  animation: riseIn 720ms var(--ease) 120ms both;
+}
+
+.eyebrow {
+  color: var(--orange);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  max-width: 780px;
+  margin-top: 18px;
+  color: #ffffff;
+  font-size: clamp(52px, 9vw, 128px);
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 0.88;
+}
+
+.lede {
+  max-width: 650px;
+  margin-top: 28px;
+  color: rgba(247, 243, 234, 0.8);
+  font-size: clamp(17px, 1.7vw, 22px);
+  line-height: 1.55;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 0 18px;
+  font-size: 14px;
+  font-weight: 860;
+  transition:
+    transform 180ms var(--ease),
+    border-color 180ms var(--ease),
+    background 180ms var(--ease),
+    color 180ms var(--ease);
+}
+
+.primaryButton {
+  border: 1px solid var(--orange);
+  background: var(--orange);
+  color: #140701;
+  box-shadow: 0 16px 34px rgba(255, 90, 31, 0.25);
+}
+
+.secondaryButton {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.episodeSection,
+.membershipSection,
+.closer {
+  width: min(1240px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.episodeSection {
+  padding: clamp(70px, 9vw, 118px) 0 0;
+}
+
+.sectionHeader {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.episodePreview {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(340px, 1fr);
+  gap: 16px;
+}
+
+.featuredEpisode,
+.episodeCtaPanel {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.featuredEpisode {
+  min-height: 460px;
+  padding: clamp(24px, 4vw, 40px);
+  background:
+    linear-gradient(180deg, rgba(255, 90, 31, 0.08), rgba(46, 125, 246, 0.08)),
+    rgba(255, 255, 255, 0.055);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featuredEpisode span,
+.episodeCard p {
+  color: var(--orange);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.featuredEpisode h3 {
+  max-width: 560px;
+  margin-top: 16px;
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.05;
+}
+
+.featuredEpisode p {
+  max-width: 500px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.58;
+}
+
+.episodeCtaPanel {
+  min-height: 460px;
+  padding: clamp(24px, 4vw, 40px);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(46, 125, 246, 0.08)
+    ),
+    rgba(255, 255, 255, 0.055);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.panelCopy {
+  max-width: 540px;
+}
+
+.panelCopy > p {
+  color: var(--orange);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.panelCopy h3 {
+  margin-top: 16px;
+  color: #ffffff;
+  font-size: clamp(25px, 3vw, 38px);
+  line-height: 1.12;
+}
+
+.panelCopy span {
+  display: block;
+  max-width: 500px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.58;
+}
+
+.previewActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.membershipSection {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.62fr);
+  gap: clamp(26px, 7vw, 96px);
+  align-items: start;
+  padding: clamp(82px, 10vw, 132px) 0;
+}
+
+.membershipContent .primaryButton {
+  margin-top: 28px;
+}
+
+.benefitList {
+  display: grid;
+  gap: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.benefitList li {
+  position: relative;
+  padding: 24px 0 24px 34px;
+  border-bottom: 1px solid var(--line);
+  color: rgba(247, 243, 234, 0.86);
+  font-size: clamp(18px, 2vw, 23px);
+  font-weight: 760;
+  line-height: 1.3;
+}
+
+.benefitList li::before {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  content: "";
+}
+
+.closer {
+  border-top: 1px solid var(--line);
+  padding: 44px 0 56px;
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 4px;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.025);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 920px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 44px;
+  }
+
+  .heroOverlay {
+    background:
+      linear-gradient(180deg, rgba(5, 8, 15, 0.64), rgba(5, 8, 15, 0.96) 74%),
+      linear-gradient(90deg, rgba(5, 8, 15, 0.76), rgba(5, 8, 15, 0.34));
+  }
+
+  .heroMedia {
+    background-position: center 82px;
+    background-size: min(82vw, 460px) auto;
+    opacity: 0.44;
+  }
+
+  .heroGrid {
+    min-height: auto;
+    padding-top: 92px;
+  }
+
+  .heroContent {
+    padding-bottom: 0;
+  }
+
+  .episodePreview,
+  .membershipSection {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredEpisode,
+  .episodeCtaPanel {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding-inline: 16px;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(48px, 18vw, 76px);
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .previewActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .episodeSection,
+  .membershipSection,
+  .closer {
+    width: min(100% - 28px, 1240px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroMedia,
+  .heroContent,
+  .primaryButton,
+  .secondaryButton,
+  .episodeCard {
+    animation: none;
+    transition: none;
+  }
+}

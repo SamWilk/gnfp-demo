@@ -1,0 +1,129 @@
+.contactForm {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f7f3ea;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.contactForm label {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  color: rgba(247, 243, 234, 0.9);
+  font-size: 0.92rem;
+  font-weight: 820;
+}
+
+.fieldGrid label {
+  margin-top: 0;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(5, 8, 15, 0.72);
+  color: #ffffff;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: rgba(247, 243, 234, 0.44);
+}
+
+.contactForm input {
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.contactForm textarea {
+  min-height: 132px;
+  resize: vertical;
+  padding: 13px 14px;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: #ff5a1f;
+  background: rgba(5, 8, 15, 0.92);
+  box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.18);
+}
+
+.contactForm button {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #ff5a1f;
+  color: #140701;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.contactForm button:hover {
+  background: #ff723e;
+  transform: translateY(-2px);
+}
+
+.contactForm button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.successMessage,
+.errorMessage {
+  margin-top: 14px;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.successMessage {
+  background: rgba(46, 125, 246, 0.16);
+  color: #dce8ff;
+}
+
+.errorMessage {
+  background: rgba(255, 90, 31, 0.16);
+  color: #ffd9ca;
+}
+
+@media (max-width: 640px) {
+  .contactForm {
+    padding: 22px;
+  }
+
+  .fieldGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .fieldGrid label + label {
+    margin-top: 14px;
+  }
+}
