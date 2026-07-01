@@ -3,7 +3,8 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const contactEmail = "samwilk1898@gmail.com";
+const contactEmail =
+  process.env.CONTACT_TO_EMAIL || "samwilk1898@gmail.com";
 
 function cleanField(value) {
   return String(value || "").trim();
