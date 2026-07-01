@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { navItems, patreonUrl, storeUrl, youtubeUrl } from "../../_data/podcast";
+import { navItems, patreonUrl, storeUrl } from "../../_data/podcast";
 import styles from "./SiteHeader.module.css";
 
 export default function SiteHeader() {
@@ -47,14 +47,6 @@ export default function SiteHeader() {
             {item.label}
           </Link>
         ))}
-        <a
-          href={youtubeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={handleNavClick}
-        >
-          YouTube
-        </a>
         <a
           href={storeUrl}
           target="_blank"

@@ -76,23 +76,38 @@
   margin-top: 30px;
 }
 
-.primaryButton {
+.primaryButton,
+.secondaryButton {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--orange);
   border-radius: 6px;
   padding: 0 18px;
-  background: var(--orange);
-  color: #140701;
   font-size: 14px;
   font-weight: 860;
-  box-shadow: 0 16px 34px rgba(255, 90, 31, 0.25);
-  transition: transform 180ms var(--ease);
+  transition:
+    transform 180ms var(--ease),
+    border-color 180ms var(--ease),
+    background 180ms var(--ease),
+    color 180ms var(--ease);
 }
 
-.primaryButton:hover {
+.primaryButton {
+  border: 1px solid var(--orange);
+  background: var(--orange);
+  color: #140701;
+  box-shadow: 0 16px 34px rgba(255, 90, 31, 0.25);
+}
+
+.secondaryButton {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
   transform: translateY(-2px);
 }
 
@@ -198,7 +213,8 @@
   line-height: 1.5;
 }
 
-.primaryButton:focus-visible {
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
   outline: 3px solid rgba(255, 255, 255, 0.9);
   outline-offset: 4px;
 }
@@ -237,6 +253,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .primaryButton,
+  .secondaryButton,
   .episodeCard {
     transition: none;
   }
