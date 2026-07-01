@@ -42,8 +42,8 @@ export default function Home() {
               >
                 Support the show
               </a>
-              <Link className={styles.secondaryButton} href="/episodes">
-                Browse episodes
+              <Link className={styles.secondaryButton} href="/videos">
+                Browse videos
               </Link>
               <a
                 className={styles.secondaryButton}
@@ -69,8 +69,8 @@ export default function Home() {
       <section className={styles.episodeSection} id="episodes">
         <div className={styles.sectionHeader}>
           <SectionIntro
-            eyebrow="Latest episode"
-            title="A dedicated episodes page with the newest YouTube upload."
+            eyebrow="Latest video"
+            title="A dedicated videos page with the newest YouTube upload."
           />
         </div>
 
@@ -79,26 +79,26 @@ export default function Home() {
             <span>Verified {latestYouTubeEpisode.verifiedOn}</span>
             <h3>{latestYouTubeEpisode.title}</h3>
             <p>
-              Watch the current upload on the new episodes page, then move
+              Watch the current upload on the new videos page, then move
               through the regular GNFP postgame, roster, and preview formats.
             </p>
           </article>
 
           <div className={styles.episodeCtaPanel}>
             <div className={styles.panelCopy}>
-              <p>New episode destination</p>
+              <p>New video destination</p>
               <h3>
                 Watch the embedded latest upload and jump out to YouTube when
                 you need the full channel.
               </h3>
               <span>
-                The dedicated episodes page keeps the newest post front and
+                The dedicated videos page keeps the newest post front and
                 center, then lays out the regular GNFP formats below it.
               </span>
             </div>
             <div className={styles.previewActions}>
-              <Link className={styles.primaryButton} href="/episodes">
-                Open episodes page
+              <Link className={styles.primaryButton} href="/videos">
+                Open videos page
               </Link>
               <a
                 className={styles.secondaryButton}

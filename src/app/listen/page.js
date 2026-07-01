@@ -60,8 +60,8 @@ export default function ListenPage() {
         </div>
         <p className={styles.bodyCopy}>
           Use this page as the audio-first destination for GNFP listeners. The
-          Spotify embed handles recent show playback, while the separate
-          episodes page stays focused on the latest YouTube upload.
+          Spotify embed handles recent show playback, while the separate videos
+          page stays focused on the latest YouTube upload.
         </p>
       </section>
     </main>

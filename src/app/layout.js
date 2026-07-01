@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "Gator Nation Football Podcast",
   description:
-    "A modern home for GNFP episodes, member extras, and Florida football conversation.",
+    "A modern home for GNFP videos, podcast listening, member extras, and Florida football conversation.",
   keywords: [
     "Gator Nation Football Podcast",
     "Florida football podcast",

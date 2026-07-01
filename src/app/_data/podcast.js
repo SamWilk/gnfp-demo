@@ -6,7 +6,7 @@ export const spotifyShowId = "5g6RBSb7vQCglyfXkm5Pce";
 export const contactEmail = "gatornationfootballpodcast@gmail.com";
 
 export const navItems = [
-  { href: "/episodes", label: "Episodes" },
+  { href: "/videos", label: "Videos" },
   { href: "/listen", label: "Listen" },
   { href: "/#membership", label: "Membership" },
   { href: "/about", label: "About" },

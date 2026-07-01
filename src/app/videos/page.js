@@ -8,12 +8,12 @@ import {
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Episodes | Gator Nation Football Podcast",
+  title: "Videos | Gator Nation Football Podcast",
   description:
     "Watch the latest GNFP YouTube episode and explore the regular Florida football podcast formats.",
 };
 
-export default function EpisodesPage() {
+export default function VideosPage() {
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
@@ -21,7 +21,7 @@ export default function EpisodesPage() {
 
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>Episodes</p>
+            <p className={styles.eyebrow}>Videos</p>
             <h1>Watch the latest GNFP upload without leaving the site.</h1>
             <p className={styles.lede}>
               The newest YouTube episode is embedded below. This latest upload
@@ -60,7 +60,7 @@ export default function EpisodesPage() {
       </section>
 
       <section className={styles.titleBand}>
-        <p className={styles.eyebrow}>Current upload</p>
+        <p className={styles.eyebrow}>Current video</p>
         <h2>{latestYouTubeEpisode.title}</h2>
       </section>
 
